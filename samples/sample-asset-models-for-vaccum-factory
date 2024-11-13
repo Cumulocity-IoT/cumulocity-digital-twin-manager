@@ -1,7 +1,7 @@
 {
   "name": "Vaccum Factory",
   "description": "Represents the hierarchy of a factory with vaccum chamber",
-  "tags": ["SAG", "DTM"],
+  "tags": ["Cumulocity GmbH", "DTM"],
   "assetModels": [
     {
       "c8y_IsAssetType": {
