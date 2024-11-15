@@ -1,7 +1,6 @@
 {
   "name": "Wind Turbine",
   "description": "A wind turbine is a asset that converts the kinetic energy of wind into electrical energy.",
-  "tags": ["Cumulocity GmbH", "DTM"],
   "assetModels": [
     {
       "c8y_IsAssetType": {
