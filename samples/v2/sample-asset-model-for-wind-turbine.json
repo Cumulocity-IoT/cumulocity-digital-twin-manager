@@ -1,0 +1,338 @@
+{
+  "name": "Wind Turbine",
+  "description": "A wind turbine is a asset that converts the kinetic energy of wind into electrical energy.",
+  "assetDefinitions": [
+    {
+      "identifier": "territory",
+      "composition": {
+        "allowedProperties": [
+          {
+            "identifier": "wec_NominalPowerTotal"
+          }
+        ],
+        "allowedSubAssets": [
+          {
+            "identifier": "windfarm"
+          }
+        ]
+      },
+      "jsonSchema": {
+        "title": "Territory"
+      },
+      "icon": {
+        "name": "location",
+        "category": "location"
+      }
+    },
+    {
+      "identifier": "windFarm",
+      "composition": {
+        "allowedProperties": [
+          {
+            "identifier": "wec_NominalPowerTotal"
+          }
+        ],
+        "allowedSubAssets": [
+          {
+            "identifier": "windTurbine"
+          }
+        ]
+      },
+      "jsonSchema": {
+        "description": "A wind farm is a group of wind turbines in the same location.",
+        "title": "Wind Farm"
+      },
+      "icon": {
+        "name": "address",
+        "category": "location"
+      }
+    },
+    {
+      "identifier": "windTurbine",
+      "composition": {
+        "allowedProperties": [
+          {
+            "identifier": "wec_Address"
+          },
+          {
+            "identifier": "wec_CommissioningDate"
+          },
+          {
+            "identifier": "wec_GridOperator"
+          },
+          {
+            "identifier": "wec_HubHeightM"
+          },
+          {
+            "identifier": "wec_Model"
+          },
+          {
+            "identifier": "wec_NominalPowerKW"
+          },
+          {
+            "identifier": "wec_RotorDiameterM"
+          },
+          {
+            "identifier": "wec_Serial"
+          },
+          {
+            "identifier": "wec_WindFarmName"
+          },
+          {
+            "identifier": "wec_Operator"
+          },
+          {
+            "identifier": "wec_Manufacturer"
+          },
+          {
+            "identifier": "c8y_Position"
+          },
+          {
+            "identifier": "wec_turbine_type"
+          },
+          {
+            "identifier": "wec_last_maintenance"
+          },
+          {
+            "identifier": "wec_nominal_speed"
+          },
+          {
+            "identifier": "isgearless"
+          }
+        ],
+        "allowedSubAssets": [
+          {
+            "identifier": "wec_generator"
+          },
+          {
+            "identifier": "wec_gear_box"
+          }
+        ]
+      },
+      "jsonSchema": {
+        "description": "A wind turbine is a asset that converts the kinetic energy of wind into electrical energy.",
+        "title": "Wind Turbine"
+      },
+      "icon": {
+        "name": "fan",
+        "category": "devicesAndSensors"
+      }
+    },
+    {
+      "identifier": "wec_generator",
+      "composition": {
+        "allowedProperties": [
+          {
+            "identifier": "wec_NominalPowerKW"
+          }
+        ]
+      },
+      "jsonSchema": {
+        "title": "Generator"
+      }
+    },
+    {
+      "identifier": "wec_gear_box",
+      "jsonSchema": {
+        "title": "Gear Box"
+      }
+    }
+  ],
+  "propertyDefinition": [
+    {
+      "identifier": "wec_NominalPowerTotal",
+      "jsonSchema": {
+        "title": "Total Nominal Power",
+        "description": "Total Nominal Power of Wind Farm or whole Territory in kW",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "number"
+      }
+    },
+    {
+      "identifier": "wec_Address",
+      "jsonSchema": {
+        "title": "Wind Turbine Address",
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "country": {
+            "type": "string",
+            "title": "Country"
+          },
+          "city": {
+            "type": "string",
+            "title": "City"
+          },
+          "street": {
+            "type": "string",
+            "title": "Street"
+          },
+          "cityCode": {
+            "type": "string",
+            "title": "City Code"
+          },
+          "territory": {
+            "type": "string",
+            "title": "Territory"
+          }
+        }
+      }
+    },
+    {
+      "identifier": "wec_CommissioningDate",
+      "jsonSchema": {
+        "title": "Commissioning Date",
+        "description": "Commissioning date of wind turbine",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "string"
+      }
+    },
+    {
+      "identifier": "wec_GridOperator",
+      "jsonSchema": {
+        "title": "Grid Operator",
+        "description": "Grid Operator to which the Wind Turbine is connected",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "string"
+      }
+    },
+    {
+      "identifier": "wec_HubHeightM",
+      "jsonSchema": {
+        "title": "Hub Height",
+        "description": "Hub Height in meter",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "number"
+      }
+    },
+    {
+      "identifier": "wec_Model",
+      "jsonSchema": {
+        "title": "Model",
+        "description": "Model of Wind Turbine",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "string"
+      }
+    },
+    {
+      "identifier": "wec_NominalPowerKW",
+      "jsonSchema": {
+        "title": "Nominal Power",
+        "description": "Nominal Power of Wind Turbine in kW",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "number"
+      }
+    },
+    {
+      "identifier": "wec_RotorDiameterM",
+      "jsonSchema": {
+        "title": "Rotor Diameter",
+        "description": "Rotor Diameter in M",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "number"
+      }
+    },
+    {
+      "identifier": "wec_Serial",
+      "jsonSchema": {
+        "title": "Serial Number",
+        "description": "Serial Number of Wind Turbine",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "string"
+      }
+    },
+    {
+      "identifier": "wec_WindFarmName",
+      "jsonSchema": {
+        "title": "Wind Farm",
+        "description": "Wind Farm of Wind Turbine",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "string"
+      }
+    },
+    {
+      "identifier": "wec_Operator",
+      "jsonSchema": {
+        "title": "Wind Turbine Operator",
+        "description": "Wind Turbine Operator",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "string"
+      }
+    },
+    {
+      "identifier": "wec_Manufacturer",
+      "jsonSchema": {
+        "title": "Manufacturer",
+        "description": "Manufacturer of Wind Turbine",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "string"
+      }
+    },
+    {
+      "identifier": "c8y_Position",
+      "jsonSchema": {
+        "title": "Location",
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "lat": {
+            "type": "number",
+            "title": "Latitude"
+          },
+          "lng": {
+            "type": "number",
+            "title": "Longitude"
+          },
+          "alt": {
+            "type": "number",
+            "title": "Altitude"
+          }
+        }
+      }
+    },
+    {
+      "identifier": "wec_turbine_type",
+      "jsonSchema": {
+        "title": "Turbine Type",
+        "description": "Type of the wind turbine, either onshore or offshore.",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "string",
+        "enum": [
+          "Onshore",
+          "Offshore"
+        ]
+      }
+    },
+    {
+      "identifier": "wec_last_maintenance",
+      "jsonSchema": {
+        "title": "Last Maintenance",
+        "description": "The date of the last maintenance for the wind turbine.",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "string",
+        "format": "date-time"
+      }
+    },
+    {
+      "identifier": "wec_nominal_speed",
+      "jsonSchema": {
+        "title": "Nominal Speed",
+        "description": "Nominal speed of the wind turbine in rpm.",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "number"
+      }
+    },
+    {
+      "identifier": "isgearless",
+      "jsonSchema": {
+        "title": "Is Gearless",
+        "description": "Indicates whether the wind turbine is gearless.",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "boolean",
+        "default": false
+      }
+    }
+  ]
+}

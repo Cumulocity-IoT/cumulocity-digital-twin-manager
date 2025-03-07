@@ -1,0 +1,685 @@
+{
+  "name": "Solar Power Plant",
+  "description": "Represents the whole solar power plant consisting of all the other items within the plant",
+  "assetDefinitions": [
+    {
+      "identifier": "customer",
+      "composition": {
+        "allowedProperties": [
+          {
+            "identifier": "spp_Description"
+          }
+        ],
+        "allowedSubAssets": [
+          {
+            "identifier": "customer_premise"
+          }
+        ]
+      },
+      "jsonSchema": {
+        "description": "Customers which can also have multiple sites or only one",
+        "title": "Customer"
+      },
+      "icon": {
+        "name": "attract-customers",
+        "category": "office"
+      }
+    },
+    {
+      "identifier": "customer_premise",
+      "composition": {
+        "allowedProperties": [
+          {
+            "identifier": "spp_Description"
+          },
+          {
+            "identifier": "spp_Address"
+          },
+          {
+            "identifier": "spp_timezone"
+          },
+          {
+            "identifier": "spp_Image"
+          },
+          {
+            "identifier": "c8y_Position"
+          }
+        ],
+        "allowedSubAssets": [
+          {
+            "identifier": "solar_power_plant"
+          },
+          {
+            "identifier": "grid"
+          },
+          {
+            "identifier": "load"
+          },
+          {
+            "identifier": "diesel_generator"
+          }
+        ]
+      },
+      "jsonSchema": {
+        "description": "Site which can be a ground or rooftop or even a lake with floating power plant",
+        "title": "Site"
+      },
+      "icon": {
+        "name": "waypoint-map",
+        "category": "location1"
+      }
+    },
+    {
+      "identifier": "solar_power_plant",
+      "composition": {
+        "allowedProperties": [
+          {
+            "identifier": "spp_Description",
+            "minOccurs": "1"
+          },
+          {
+            "identifier": "spp_capacity",
+            "minOccurs": "1"
+          },
+          {
+            "identifier": "spp_site_manager",
+            "minOccurs": "1"
+          },
+          {
+            "identifier": "spp_panel_details",
+            "minOccurs": "1"
+          },
+          {
+            "identifier": "spp_Image",
+            "minOccurs": "1"
+          }
+        ],
+        "allowedSubAssets": [
+          {
+            "identifier": "inverters"
+          },
+          {
+            "identifier": "energy_meter"
+          },
+          {
+            "identifier": "sensors"
+          },
+          {
+            "identifier": "string_monitoring_unit"
+          },
+          {
+            "identifier": "battery_storage"
+          }
+        ]
+      },
+      "jsonSchema": {
+        "description": "Represents the whole solar power plant consisting of all the other items within the plant",
+        "title": "Solar Power Plant"
+      },
+      "icon": {
+        "name": "greentech",
+        "category": "devicesAndSensors"
+      }
+    },
+    {
+      "identifier": "inverters",
+      "composition": {
+        "allowedProperties": [
+          {
+            "identifier": "spp_BrandModel",
+            "minOccurs": "1"
+          },
+          {
+            "identifier": "spp_panel_details"
+          },
+          {
+            "identifier": "spp_SerialNumber",
+            "minOccurs": "1"
+          },
+          {
+            "identifier": "spp_capacity",
+            "minOccurs": "1"
+          },
+          {
+            "identifier": "spp_Image"
+          },
+          {
+            "identifier": "spp_inverter_type",
+            "minOccurs": "1"
+          }
+        ],
+        "allowedSubAssets": [
+          {
+            "identifier": "inverters"
+          },
+          {
+            "identifier": "energy_meter"
+          },
+          {
+            "identifier": "sensors"
+          },
+          {
+            "identifier": "string_monitoring_unit"
+          },
+          {
+            "identifier": "battery_storage"
+          }
+        ]
+      },
+      "jsonSchema": {
+        "description": "Solar inverters which can be of various types including on-grid, off-grid, and hybrid",
+        "title": "Inverters"
+      },
+      "icon": {
+        "name": "invoice",
+        "category": "office"
+      }
+    },
+    {
+      "identifier": "energy_meter",
+      "composition": {
+        "allowedProperties": [
+          {
+            "identifier": "spp_BrandModel",
+            "minOccurs": "1"
+          },
+          {
+            "identifier": "spp_SerialNumber"
+          },
+          {
+            "identifier": "spp_Image"
+          }
+        ]
+      },
+      "jsonSchema": {
+        "description": "Energy meters of different types which are installed at various locations within the power plant",
+        "title": "Energy Meter"
+      },
+      "icon": {
+        "name": "smartphone-ram",
+        "category": "devicesAndSensors"
+      }
+    },
+    {
+      "identifier": "sensors",
+      "composition": {
+        "allowedProperties": [
+          {
+            "identifier": "spp_Description"
+          },
+          {
+            "identifier": "spp_Image"
+          }
+        ]
+      },
+      "jsonSchema": {
+        "description": "Consist of different types of sensors which are used to monitor the weather or health of the power plant",
+        "title": "Sensors"
+      },
+      "icon": {
+        "name": "sensor",
+        "category": "devicesAndSensors"
+      }
+    },
+    {
+      "identifier": "string_monitoring_unit",
+      "composition": {
+        "allowedProperties": [
+          {
+            "identifier": "spp_BrandModel"
+          },
+          {
+            "identifier": "spp_SerialNumber"
+          },
+          {
+            "identifier": "spp_Image"
+          },
+          {
+            "identifier": "spp_panel_detailsspp_panel_details"
+          }
+        ]
+      },
+      "jsonSchema": {
+        "description": "String monitoring units used to measure the currents generated in each string",
+        "title": "String Monitoring Unit"
+      },
+      "icon": {
+        "name": "air-quality",
+        "category": "devicesAndSensors"
+      }
+    },
+    {
+      "identifier": "battery_storage",
+      "composition": {
+        "allowedProperties": [
+          {
+            "identifier": "spp_BrandModel"
+          },
+          {
+            "identifier": "spp_Image"
+          }
+        ]
+      },
+      "jsonSchema": {
+        "description": "Battery storage to measure the health of batteries and the energy being stored as well consumed from it",
+        "title": "Battery Storage"
+      },
+      "icon": {
+        "name": "charging-battery",
+        "category": "devicesAndSensors"
+      }
+    },
+    {
+      "identifier": "grid",
+      "composition": {
+        "allowedProperties": [
+          {
+            "identifier": "spp_Description"
+          }
+        ],
+        "allowedSubAssets": [
+          {
+            "identifier": "sensors"
+          },
+          {
+            "identifier": "energy-meter"
+          },
+          {
+            "identifier": "transformer"
+          }
+        ]
+      },
+      "jsonSchema": {
+        "description": "To capture and measure power consumption and export via grid",
+        "title": "Grid"
+      },
+      "icon": {
+        "name": "quick-mode-on",
+        "category": "userInterface"
+      }
+    },
+    {
+      "identifier": "transformer",
+      "composition": {
+        "allowedProperties": [
+          {
+            "identifier": "spp_Description"
+          }
+        ],
+        "allowedSubAssets": [
+          {
+            "identifier": "energy_meter",
+            "minOccurs": "1"
+          },
+          {
+            "identifier": "sensors"
+          },
+          {
+            "identifier": "transformer"
+          }
+        ]
+      },
+      "jsonSchema": {
+        "description": "To keep a health check of Transformer",
+        "title": "Transformer"
+      },
+      "icon": {
+        "name": "depot",
+        "category": "city"
+      }
+    },
+    {
+      "identifier": "load",
+      "composition": {
+        "allowedProperties": [
+          {
+            "identifier": "spp_Description"
+          }
+        ],
+        "allowedSubAssets": [
+          {
+            "identifier": "energy_meter"
+          },
+          {
+            "identifier": "sensors"
+          }
+        ]
+      },
+      "jsonSchema": {
+        "description": "Asset to represent load to capture power consumption",
+        "title": "Load"
+      },
+      "icon": {
+        "name": "plug",
+        "category": "devicesAndSensors"
+      }
+    },
+    {
+      "identifier": "diesel_generator",
+      "composition": {
+        "allowedProperties": [
+          {
+            "identifier": "spp_capacity"
+          },
+          {
+            "identifier": "spp_BrandModel"
+          },
+          {
+            "identifier": "spp_Image"
+          }
+        ],
+        "allowedSubAssets": [
+          {
+            "identifier": "energy_meter"
+          },
+          {
+            "identifier": "sensors"
+          }
+        ]
+      },
+      "jsonSchema": {
+        "description": "Diesel Generators used for power backup",
+        "title": "Diesel Generator"
+      },
+      "icon": {
+        "name": "gas",
+        "category": "devicesAndSensors"
+      }
+    }
+  ],
+  "propertyDefinitions": [
+    {
+      "identifier": "spp_Description",
+      "jsonSchema": {
+        "title": "Equipment Description",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "string"
+      }
+    },
+    {
+      "identifier": "spp_Address",
+      "jsonSchema": {
+        "title": "Plant Address",
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "pincode": {
+            "type": "string",
+            "title": "Pincode"
+          },
+          "country": {
+            "type": "string",
+            "title": "Country"
+          },
+          "city": {
+            "type": "string",
+            "title": "City"
+          },
+          "address_line_1": {
+            "type": "string",
+            "title": "Address Line 1"
+          },
+          "address_line_2": {
+            "type": "string",
+            "title": "Address Line 2"
+          },
+          "state": {
+            "type": "string",
+            "title": "State"
+          }
+        }
+      },
+      "c8y_Order": [
+        {
+          "identifier": "address_line_1",
+          "order": 0
+        },
+        {
+          "identifier": "address_line_1",
+          "order": 1
+        },
+        {
+          "identifier": "city",
+          "order": 2
+        },
+        {
+          "identifier": "state",
+          "order": 3
+        },
+        {
+          "identifier": "pincode",
+          "order": 4
+        },
+        {
+          "identifier": "country",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "identifier": "spp_timezone",
+      "jsonSchema": {
+        "title": "Plant Timezone",
+        "description": "To capture the timezone of the location where site is located",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "string",
+        "format": "date-time"
+      }
+    },
+    {
+      "identifier": "spp_Image",
+      "jsonSchema": {
+        "title": "Equipment Image",
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "binaryId": {
+            "type": "string",
+            "format": "uri-reference",
+            "contentMediaType": "jpg,png,jpeg"
+          },
+          "binarySize": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "binaryId"
+        ]
+      }
+    },
+    {
+      "identifier": "c8y_Position",
+      "jsonSchema": {
+        "title": "Location",
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "lng": {
+            "maximum": 180,
+            "type": "number",
+            "title": "Longitude",
+            "minimum": -180
+          },
+          "alt": {
+            "type": "number",
+            "title": "Altitude"
+          },
+          "lat": {
+            "maximum": 90,
+            "type": "number",
+            "title": "Latitude",
+            "minimum": -90
+          }
+        }
+      }
+    },
+    {
+      "identifier": "c8y_Position",
+      "jsonSchema": {
+        "title": "Location",
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "lng": {
+            "maximum": 180,
+            "type": "number",
+            "title": "Longitude",
+            "minimum": -180
+          },
+          "alt": {
+            "type": "number",
+            "title": "Altitude"
+          },
+          "lat": {
+            "maximum": 90,
+            "type": "number",
+            "title": "Latitude",
+            "minimum": -90
+          }
+        }
+      },
+      "c8y_Order": [
+        {
+          "identifier": "alt",
+          "order": 1
+        },
+        {
+          "identifier": "lat",
+          "order": 2
+        },
+        {
+          "identifier": "lng",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "identifier": "spp_capacity",
+      "jsonSchema": {
+        "title": "Maximum Power Output Capacity",
+        "description": "Used to capture capacity of a solar power plant or individual inverters",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "number"
+      }
+    },
+    {
+      "identifier": "spp_site_manager",
+      "jsonSchema": {
+        "title": "Site Manager",
+        "description": "Site manager details who is responsible for managing the site",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "string"
+      }
+    },
+    {
+      "identifier": "spp_panel_details",
+      "jsonSchema": {
+        "title": "Panel Details",
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "tilt_angle": {
+            "type": "number",
+            "title": "Tilt Angle"
+          },
+          "orientation_from_north": {
+            "default": 270,
+            "type": "number",
+            "title": "Orientation from North"
+          },
+          "total_nos": {
+            "type": "number",
+            "title": "Total No.s"
+          },
+          "brand": {
+            "type": "string",
+            "title": "Brand"
+          },
+          "model_no": {
+            "type": "string",
+            "title": "Model No."
+          }
+        }
+      },
+      "c8y_Order": [
+        {
+          "identifier": "brand",
+          "order": 0
+        },
+        {
+          "identifier": "model_no",
+          "order": 1
+        },
+        {
+          "identifier": "tilt_angle",
+          "order": 2
+        },
+        {
+          "identifier": "orientation_from_north",
+          "order": 3
+        },
+        {
+          "identifier": "total_nos",
+          "order": 4
+        }
+      ]
+    },
+    {
+      "identifier": "spp_BrandModel",
+      "jsonSchema": {
+        "title": "Brand & Model",
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "Brand": {
+            "type": "string",
+            "title": "Brand"
+          },
+          "Model": {
+            "type": "string",
+            "title": "Model"
+          }
+        }
+      },
+      "c8y_Order": [
+        {
+          "identifier": "brand",
+          "order": 0
+        },
+        {
+          "identifier": "model",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "identifier": "spp_SerialNumber",
+      "jsonSchema": {
+        "title": "Equipment Serial Number",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "string"
+      }
+    },
+    {
+      "identifier": "spp_inverter_type",
+      "jsonSchema": {
+        "title": "Inverter Type",
+        "description": "Capture the type of inverter",
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "string",
+        "enum": [
+          "On-Grid Inverter",
+          "Off-Grid Inverter",
+          "Hybrid Inverter"
+        ]
+      }
+    }
+  ]
+}
