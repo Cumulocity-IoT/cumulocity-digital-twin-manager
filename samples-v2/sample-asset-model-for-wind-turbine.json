@@ -12,7 +12,7 @@
         ],
         "allowedSubAssets": [
           {
-            "identifier": "windfarm"
+            "identifier": "windFarm"
           }
         ]
       },
@@ -22,7 +22,8 @@
       "icon": {
         "name": "location",
         "category": "location"
-      }
+      },
+      "depth": 0
     },
     {
       "identifier": "windFarm",
@@ -45,7 +46,8 @@
       "icon": {
         "name": "address",
         "category": "location"
-      }
+      },
+      "depth": 1
     },
     {
       "identifier": "windTurbine",
@@ -116,7 +118,8 @@
       "icon": {
         "name": "fan",
         "category": "devicesAndSensors"
-      }
+      },
+      "depth": 2
     },
     {
       "identifier": "wec_generator",
@@ -125,20 +128,35 @@
           {
             "identifier": "wec_NominalPowerKW"
           }
-        ]
+        ],
+        "allowedSubAssets": []
       },
       "jsonSchema": {
         "title": "Generator"
-      }
+      },
+      "icon": {
+        "name": "",
+        "category": ""
+      },
+      "depth": 3
     },
     {
       "identifier": "wec_gear_box",
       "jsonSchema": {
         "title": "Gear Box"
+      },
+      "depth": 3,
+      "icon": {
+        "name": "fan",
+        "category": "devicesAndSensors"
+      },
+      "composition": {
+        "allowedProperties": [],
+        "allowedSubAssets": []
       }
     }
   ],
-  "propertyDefinition": [
+  "propertyDefinitions": [
     {
       "identifier": "wec_NominalPowerTotal",
       "jsonSchema": {
@@ -299,10 +317,7 @@
         "description": "Type of the wind turbine, either onshore or offshore.",
         "$schema": "http://json-schema.org/draft-07/schema#",
         "type": "string",
-        "enum": [
-          "Onshore",
-          "Offshore"
-        ]
+        "enum": ["Onshore", "Offshore"]
       }
     },
     {
@@ -327,7 +342,7 @@
     {
       "identifier": "isgearless",
       "jsonSchema": {
-        "title": "Is Gearless",
+        "title": "IsGearless",
         "description": "Indicates whether the wind turbine is gearless.",
         "$schema": "http://json-schema.org/draft-07/schema#",
         "type": "boolean",
