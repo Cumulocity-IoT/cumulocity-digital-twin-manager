@@ -22,7 +22,8 @@
       "icon": {
         "name": "office",
         "category": "city"
-      }
+      },
+      "depth": 0
     },
     {
       "identifier": "factory",
@@ -31,7 +32,8 @@
           {
             "identifier": "line"
           }
-        ]
+        ],
+        "allowedProperties": []
       },
       "jsonSchema": {
         "title": "Factory"
@@ -39,7 +41,8 @@
       "icon": {
         "name": "warehouse",
         "category": "city"
-      }
+      },
+      "depth": 1
     },
     {
       "identifier": "line",
@@ -48,7 +51,8 @@
           {
             "identifier": "vacuum_chamber"
           }
-        ]
+        ],
+        "allowedProperties": []
       },
       "jsonSchema": {
         "title": "Line"
@@ -56,7 +60,8 @@
       "icon": {
         "name": "robot",
         "category": "devicesAndSensors"
-      }
+      },
+      "depth": 2
     },
     {
       "identifier": "vacuum_chamber",
@@ -66,7 +71,12 @@
       "icon": {
         "name": "robot",
         "category": "devicesAndSensors"
-      }
+      },
+      "composition": {
+        "allowedProperties": [],
+        "allowedSubAssets": []
+      },
+      "depth": 3
     }
   ],
   "propertyDefinitions": [

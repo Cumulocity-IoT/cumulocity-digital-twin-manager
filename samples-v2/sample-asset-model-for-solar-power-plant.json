@@ -23,7 +23,8 @@
       "icon": {
         "name": "attract-customers",
         "category": "office"
-      }
+      },
+      "depth": 0
     },
     {
       "identifier": "customer_premise",
@@ -67,7 +68,8 @@
       "icon": {
         "name": "waypoint-map",
         "category": "location1"
-      }
+      },
+      "depth": 1
     },
     {
       "identifier": "solar_power_plant",
@@ -119,7 +121,8 @@
       "icon": {
         "name": "greentech",
         "category": "devicesAndSensors"
-      }
+      },
+      "depth": 2
     },
     {
       "identifier": "inverters",
@@ -148,23 +151,7 @@
             "minOccurs": "1"
           }
         ],
-        "allowedSubAssets": [
-          {
-            "identifier": "inverters"
-          },
-          {
-            "identifier": "energy_meter"
-          },
-          {
-            "identifier": "sensors"
-          },
-          {
-            "identifier": "string_monitoring_unit"
-          },
-          {
-            "identifier": "battery_storage"
-          }
-        ]
+        "allowedSubAssets": []
       },
       "jsonSchema": {
         "description": "Solar inverters which can be of various types including on-grid, off-grid, and hybrid",
@@ -173,7 +160,8 @@
       "icon": {
         "name": "invoice",
         "category": "office"
-      }
+      },
+      "depth": 3
     },
     {
       "identifier": "energy_meter",
@@ -189,7 +177,8 @@
           {
             "identifier": "spp_Image"
           }
-        ]
+        ],
+        "allowedSubAssets": []
       },
       "jsonSchema": {
         "description": "Energy meters of different types which are installed at various locations within the power plant",
@@ -198,7 +187,8 @@
       "icon": {
         "name": "smartphone-ram",
         "category": "devicesAndSensors"
-      }
+      },
+      "depth": 4
     },
     {
       "identifier": "sensors",
@@ -210,7 +200,8 @@
           {
             "identifier": "spp_Image"
           }
-        ]
+        ],
+        "allowedSubAssets": []
       },
       "jsonSchema": {
         "description": "Consist of different types of sensors which are used to monitor the weather or health of the power plant",
@@ -219,7 +210,8 @@
       "icon": {
         "name": "sensor",
         "category": "devicesAndSensors"
-      }
+      },
+      "depth": 4
     },
     {
       "identifier": "string_monitoring_unit",
@@ -235,9 +227,10 @@
             "identifier": "spp_Image"
           },
           {
-            "identifier": "spp_panel_detailsspp_panel_details"
+            "identifier": "spp_panel_details"
           }
-        ]
+        ],
+        "allowedSubAssets": []
       },
       "jsonSchema": {
         "description": "String monitoring units used to measure the currents generated in each string",
@@ -246,7 +239,8 @@
       "icon": {
         "name": "air-quality",
         "category": "devicesAndSensors"
-      }
+      },
+      "depth": 3
     },
     {
       "identifier": "battery_storage",
@@ -258,7 +252,8 @@
           {
             "identifier": "spp_Image"
           }
-        ]
+        ],
+        "allowedSubAssets": []
       },
       "jsonSchema": {
         "description": "Battery storage to measure the health of batteries and the energy being stored as well consumed from it",
@@ -267,7 +262,8 @@
       "icon": {
         "name": "charging-battery",
         "category": "devicesAndSensors"
-      }
+      },
+      "depth": 3
     },
     {
       "identifier": "grid",
@@ -282,7 +278,7 @@
             "identifier": "sensors"
           },
           {
-            "identifier": "energy-meter"
+            "identifier": "energy_meter"
           },
           {
             "identifier": "transformer"
@@ -296,14 +292,18 @@
       "icon": {
         "name": "quick-mode-on",
         "category": "userInterface"
-      }
+      },
+      "depth": 2
     },
     {
       "identifier": "transformer",
       "composition": {
         "allowedProperties": [
           {
-            "identifier": "spp_Description"
+            "identifier": "spp_Image"
+          },
+          {
+            "identifier": "spp_capacity"
           }
         ],
         "allowedSubAssets": [
@@ -313,9 +313,6 @@
           },
           {
             "identifier": "sensors"
-          },
-          {
-            "identifier": "transformer"
           }
         ]
       },
@@ -326,7 +323,8 @@
       "icon": {
         "name": "depot",
         "category": "city"
-      }
+      },
+      "depth": 3
     },
     {
       "identifier": "load",
@@ -352,7 +350,8 @@
       "icon": {
         "name": "plug",
         "category": "devicesAndSensors"
-      }
+      },
+      "depth": 2
     },
     {
       "identifier": "diesel_generator",
@@ -384,7 +383,8 @@
       "icon": {
         "name": "gas",
         "category": "devicesAndSensors"
-      }
+      },
+      "depth": 2
     }
   ],
   "propertyDefinitions": [
@@ -484,9 +484,7 @@
             "type": "integer"
           }
         },
-        "required": [
-          "binaryId"
-        ]
+        "required": ["binaryId"]
       }
     },
     {
@@ -674,11 +672,7 @@
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#",
         "type": "string",
-        "enum": [
-          "On-Grid Inverter",
-          "Off-Grid Inverter",
-          "Hybrid Inverter"
-        ]
+        "enum": ["On-Grid Inverter", "Off-Grid Inverter", "Hybrid Inverter"]
       }
     }
   ]
