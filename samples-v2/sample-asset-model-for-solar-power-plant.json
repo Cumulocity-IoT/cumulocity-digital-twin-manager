@@ -484,34 +484,9 @@
             "type": "integer"
           }
         },
-        "required": ["binaryId"]
-      }
-    },
-    {
-      "identifier": "c8y_Position",
-      "jsonSchema": {
-        "title": "Location",
-        "additionalProperties": false,
-        "$schema": "http://json-schema.org/draft-07/schema#",
-        "type": "object",
-        "properties": {
-          "lng": {
-            "maximum": 180,
-            "type": "number",
-            "title": "Longitude",
-            "minimum": -180
-          },
-          "alt": {
-            "type": "number",
-            "title": "Altitude"
-          },
-          "lat": {
-            "maximum": 90,
-            "type": "number",
-            "title": "Latitude",
-            "minimum": -90
-          }
-        }
+        "required": [
+          "binaryId"
+        ]
       }
     },
     {
@@ -672,7 +647,11 @@
         "additionalProperties": false,
         "$schema": "http://json-schema.org/draft-07/schema#",
         "type": "string",
-        "enum": ["On-Grid Inverter", "Off-Grid Inverter", "Hybrid Inverter"]
+        "enum": [
+          "On-Grid Inverter",
+          "Off-Grid Inverter",
+          "Hybrid Inverter"
+        ]
       }
     }
   ]
