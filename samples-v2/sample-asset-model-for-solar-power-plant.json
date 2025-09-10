@@ -610,11 +610,11 @@
         "$schema": "http://json-schema.org/draft-07/schema#",
         "type": "object",
         "properties": {
-          "Brand": {
+          "brand": {
             "type": "string",
             "title": "Brand"
           },
-          "Model": {
+          "model": {
             "type": "string",
             "title": "Model"
           }
