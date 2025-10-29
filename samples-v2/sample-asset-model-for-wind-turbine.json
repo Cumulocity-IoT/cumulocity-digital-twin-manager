@@ -159,6 +159,7 @@
   "assetProperties": [
     {
       "identifier": "wec_NominalPowerTotal",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Total Nominal Power",
         "description": "Total Nominal Power of Wind Farm or whole Territory in kW",
@@ -168,6 +169,7 @@
     },
     {
       "identifier": "wec_Address",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Wind Turbine Address",
         "additionalProperties": false,
@@ -199,6 +201,7 @@
     },
     {
       "identifier": "wec_CommissioningDate",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Commissioning Date",
         "description": "Commissioning date of wind turbine",
@@ -208,6 +211,7 @@
     },
     {
       "identifier": "wec_GridOperator",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Grid Operator",
         "description": "Grid Operator to which the Wind Turbine is connected",
@@ -217,6 +221,7 @@
     },
     {
       "identifier": "wec_HubHeightM",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Hub Height",
         "description": "Hub Height in meter",
@@ -226,6 +231,7 @@
     },
     {
       "identifier": "wec_Model",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Model",
         "description": "Model of Wind Turbine",
@@ -235,6 +241,7 @@
     },
     {
       "identifier": "wec_NominalPowerKW",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Nominal Power",
         "description": "Nominal Power of Wind Turbine in kW",
@@ -244,6 +251,7 @@
     },
     {
       "identifier": "wec_RotorDiameterM",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Rotor Diameter",
         "description": "Rotor Diameter in M",
@@ -253,6 +261,7 @@
     },
     {
       "identifier": "wec_Serial",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Serial Number",
         "description": "Serial Number of Wind Turbine",
@@ -262,6 +271,7 @@
     },
     {
       "identifier": "wec_WindFarmName",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Wind Farm",
         "description": "Wind Farm of Wind Turbine",
@@ -271,6 +281,7 @@
     },
     {
       "identifier": "wec_Operator",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Wind Turbine Operator",
         "description": "Wind Turbine Operator",
@@ -280,6 +291,7 @@
     },
     {
       "identifier": "wec_Manufacturer",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Manufacturer",
         "description": "Manufacturer of Wind Turbine",
@@ -289,6 +301,7 @@
     },
     {
       "identifier": "c8y_Position",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Location",
         "additionalProperties": false,
@@ -312,6 +325,7 @@
     },
     {
       "identifier": "wec_turbine_type",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Turbine Type",
         "description": "Type of the wind turbine, either onshore or offshore.",
@@ -325,6 +339,7 @@
     },
     {
       "identifier": "wec_last_maintenance",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Last Maintenance",
         "description": "The date of the last maintenance for the wind turbine.",
@@ -335,6 +350,7 @@
     },
     {
       "identifier": "wec_nominal_speed",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Nominal Speed",
         "description": "Nominal speed of the wind turbine in rpm.",
@@ -344,6 +360,7 @@
     },
     {
       "identifier": "isgearless",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "IsGearless",
         "description": "Indicates whether the wind turbine is gearless.",
