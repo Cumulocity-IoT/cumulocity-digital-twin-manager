@@ -496,6 +496,7 @@
     {
       "identifier": "c8y_Position",
       "contexts": ["asset"],
+      "c8y_Origin": "library",
       "jsonSchema": {
         "title": "Location",
         "additionalProperties": false,
