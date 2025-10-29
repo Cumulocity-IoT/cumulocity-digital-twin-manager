@@ -390,6 +390,7 @@
   "assetProperties": [
     {
       "identifier": "spp_Description",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Equipment Description",
         "$schema": "http://json-schema.org/draft-07/schema#",
@@ -398,6 +399,7 @@
     },
     {
       "identifier": "spp_Address",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Plant Address",
         "additionalProperties": false,
@@ -459,6 +461,7 @@
     },
     {
       "identifier": "spp_timezone",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Plant Timezone",
         "description": "To capture the timezone of the location where site is located",
@@ -469,6 +472,7 @@
     },
     {
       "identifier": "spp_Image",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Equipment Image",
         "additionalProperties": false,
@@ -491,6 +495,7 @@
     },
     {
       "identifier": "c8y_Position",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Location",
         "additionalProperties": false,
@@ -532,6 +537,7 @@
     },
     {
       "identifier": "spp_capacity",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Maximum Power Output Capacity",
         "description": "Used to capture capacity of a solar power plant or individual inverters",
@@ -541,6 +547,7 @@
     },
     {
       "identifier": "spp_site_manager",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Site Manager",
         "description": "Site manager details who is responsible for managing the site",
@@ -550,6 +557,7 @@
     },
     {
       "identifier": "spp_panel_details",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Panel Details",
         "additionalProperties": false,
@@ -604,6 +612,7 @@
     },
     {
       "identifier": "spp_BrandModel",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Brand & Model",
         "additionalProperties": false,
@@ -633,6 +642,7 @@
     },
     {
       "identifier": "spp_SerialNumber",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Equipment Serial Number",
         "$schema": "http://json-schema.org/draft-07/schema#",
@@ -641,6 +651,7 @@
     },
     {
       "identifier": "spp_inverter_type",
+      "contexts": ["asset"],
       "jsonSchema": {
         "title": "Inverter Type",
         "description": "Capture the type of inverter",
