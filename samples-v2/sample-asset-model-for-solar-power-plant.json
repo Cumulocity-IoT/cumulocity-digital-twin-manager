@@ -413,32 +413,32 @@
           "pincode": {
             "type": "string",
             "title": "Pincode",
-            "order": 4
+            "order": 5
           },
           "country": {
             "type": "string",
             "title": "Country",
-            "order": 5
+            "order": 6
           },
           "city": {
             "type": "string",
             "title": "City",
-            "order": 2
+            "order": 3
           },
           "address_line_1": {
             "type": "string",
             "title": "Address Line 1",
-            "order": 0
+            "order": 1
           },
           "address_line_2": {
             "type": "string",
             "title": "Address Line 2",
-            "order": 1
+            "order": 2
           },
           "state": {
             "type": "string",
             "title": "State",
-            "order": 3
+            "order": 4
           }
         }
       }
@@ -553,28 +553,28 @@
           "tilt_angle": {
             "type": "number",
             "title": "Tilt Angle",
-            "order": 2
+            "order": 3
           },
           "orientation_from_north": {
             "default": 270,
             "type": "number",
             "title": "Orientation from North",
-            "order": 3
+            "order": 4
           },
           "total_nos": {
             "type": "number",
             "title": "Total No.s",
-            "order": 4
+            "order": 5
           },
           "brand": {
             "type": "string",
             "title": "Brand",
-            "order": 0
+            "order": 1
           },
           "model_no": {
             "type": "string",
             "title": "Model No.",
-            "order": 1
+            "order": 2
           }
         }
       }
@@ -593,12 +593,12 @@
           "brand": {
             "type": "string",
             "title": "Brand",
-            "order": 0
+            "order": 1
           },
           "model": {
             "type": "string",
             "title": "Model",
-            "order": 1
+            "order": 2
           }
         }
       }
