@@ -390,7 +390,9 @@
   "assetProperties": [
     {
       "identifier": "spp_Description",
-      "contexts": ["asset"],
+      "contexts": [
+        "asset"
+      ],
       "jsonSchema": {
         "title": "Equipment Description",
         "$schema": "http://json-schema.org/draft-07/schema#",
@@ -399,7 +401,9 @@
     },
     {
       "identifier": "spp_Address",
-      "contexts": ["asset"],
+      "contexts": [
+        "asset"
+      ],
       "jsonSchema": {
         "title": "Plant Address",
         "additionalProperties": false,
@@ -408,60 +412,42 @@
         "properties": {
           "pincode": {
             "type": "string",
-            "title": "Pincode"
+            "title": "Pincode",
+            "order": 5
           },
           "country": {
             "type": "string",
-            "title": "Country"
+            "title": "Country",
+            "order": 6
           },
           "city": {
             "type": "string",
-            "title": "City"
+            "title": "City",
+            "order": 3
           },
           "address_line_1": {
             "type": "string",
-            "title": "Address Line 1"
+            "title": "Address Line 1",
+            "order": 1
           },
           "address_line_2": {
             "type": "string",
-            "title": "Address Line 2"
+            "title": "Address Line 2",
+            "order": 2
           },
           "state": {
             "type": "string",
-            "title": "State"
+            "title": "State",
+            "order": 4
           }
         }
-      },
-      "c8y_Order": [
-        {
-          "identifier": "address_line_1",
-          "order": 0
-        },
-        {
-          "identifier": "address_line_1",
-          "order": 1
-        },
-        {
-          "identifier": "city",
-          "order": 2
-        },
-        {
-          "identifier": "state",
-          "order": 3
-        },
-        {
-          "identifier": "pincode",
-          "order": 4
-        },
-        {
-          "identifier": "country",
-          "order": 5
-        }
-      ]
+      }
     },
     {
       "identifier": "spp_timezone",
-      "contexts": ["asset"],
+      "contexts": [
+        "asset"
+      ],
       "jsonSchema": {
         "title": "Plant Timezone",
         "description": "To capture the timezone of the location where site is located",
@@ -472,7 +458,9 @@
     },
     {
       "identifier": "spp_Image",
-      "contexts": ["asset"],
+      "contexts": [
+        "asset"
+      ],
       "jsonSchema": {
         "title": "Equipment Image",
         "additionalProperties": false,
@@ -495,7 +483,9 @@
     },
     {
       "identifier": "c8y_Position",
-      "contexts": ["asset"],
+      "contexts": [
+        "asset"
+      ],
       "c8y_Origin": "library",
       "jsonSchema": {
         "title": "Location",
@@ -507,38 +497,29 @@
             "maximum": 180,
             "type": "number",
             "title": "Longitude",
-            "minimum": -180
+            "minimum": -180,
+            "order": 3
           },
           "alt": {
             "type": "number",
-            "title": "Altitude"
+            "title": "Altitude",
+            "order": 1
           },
           "lat": {
             "maximum": 90,
             "type": "number",
             "title": "Latitude",
-            "minimum": -90
+            "minimum": -90,
+            "order": 2
           }
         }
-      },
-      "c8y_Order": [
-        {
-          "identifier": "alt",
-          "order": 1
-        },
-        {
-          "identifier": "lat",
-          "order": 2
-        },
-        {
-          "identifier": "lng",
-          "order": 3
-        }
-      ]
+      }
     },
     {
       "identifier": "spp_capacity",
-      "contexts": ["asset"],
+      "contexts": [
+        "asset"
+      ],
       "jsonSchema": {
         "title": "Maximum Power Output Capacity",
         "description": "Used to capture capacity of a solar power plant or individual inverters",
@@ -548,7 +529,9 @@
     },
     {
       "identifier": "spp_site_manager",
-      "contexts": ["asset"],
+      "contexts": [
+        "asset"
+      ],
       "jsonSchema": {
         "title": "Site Manager",
         "description": "Site manager details who is responsible for managing the site",
@@ -558,7 +541,9 @@
     },
     {
       "identifier": "spp_panel_details",
-      "contexts": ["asset"],
+      "contexts": [
+        "asset"
+      ],
       "jsonSchema": {
         "title": "Panel Details",
         "additionalProperties": false,
@@ -567,53 +552,38 @@
         "properties": {
           "tilt_angle": {
             "type": "number",
-            "title": "Tilt Angle"
+            "title": "Tilt Angle",
+            "order": 3
           },
           "orientation_from_north": {
             "default": 270,
             "type": "number",
-            "title": "Orientation from North"
+            "title": "Orientation from North",
+            "order": 4
           },
           "total_nos": {
             "type": "number",
-            "title": "Total No.s"
+            "title": "Total No.s",
+            "order": 5
           },
           "brand": {
             "type": "string",
-            "title": "Brand"
+            "title": "Brand",
+            "order": 1
           },
           "model_no": {
             "type": "string",
-            "title": "Model No."
+            "title": "Model No.",
+            "order": 2
           }
         }
-      },
-      "c8y_Order": [
-        {
-          "identifier": "brand",
-          "order": 0
-        },
-        {
-          "identifier": "model_no",
-          "order": 1
-        },
-        {
-          "identifier": "tilt_angle",
-          "order": 2
-        },
-        {
-          "identifier": "orientation_from_north",
-          "order": 3
-        },
-        {
-          "identifier": "total_nos",
-          "order": 4
-        }
-      ]
+      }
     },
     {
       "identifier": "spp_BrandModel",
-      "contexts": ["asset"],
+      "contexts": [
+        "asset"
+      ],
       "jsonSchema": {
         "title": "Brand & Model",
         "additionalProperties": false,
@@ -622,28 +592,22 @@
         "properties": {
           "brand": {
             "type": "string",
-            "title": "Brand"
+            "title": "Brand",
+            "order": 1
           },
           "model": {
             "type": "string",
-            "title": "Model"
+            "title": "Model",
+            "order": 2
           }
         }
-      },
-      "c8y_Order": [
-        {
-          "identifier": "brand",
-          "order": 0
-        },
-        {
-          "identifier": "model",
-          "order": 1
-        }
-      ]
+      }
     },
     {
       "identifier": "spp_SerialNumber",
-      "contexts": ["asset"],
+      "contexts": [
+        "asset"
+      ],
       "jsonSchema": {
         "title": "Equipment Serial Number",
         "$schema": "http://json-schema.org/draft-07/schema#",
@@ -652,7 +616,9 @@
     },
     {
       "identifier": "spp_inverter_type",
-      "contexts": ["asset"],
+      "contexts": [
+        "asset"
+      ],
       "jsonSchema": {
         "title": "Inverter Type",
         "description": "Capture the type of inverter",
