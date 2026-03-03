@@ -1,7 +1,7 @@
 {
   "name": "Solar Power Plant",
   "description": "Represents the whole solar power plant consisting of all the other items within the plant",
-  "assetModels": [
+  "assetDefinitions": [
     {
       "identifier": "customer",
       "composition": {
@@ -387,7 +387,7 @@
       "depth": 2
     }
   ],
-  "assetProperties": [
+  "propertyDefinitions": [
     {
       "identifier": "spp_Description",
       "contexts": [

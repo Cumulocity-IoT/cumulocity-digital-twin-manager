@@ -1,7 +1,7 @@
 {
   "name": "Vaccum Factory",
   "description": "Represents the hierarchy of a factory with vaccum chamber",
-  "assetModels": [
+  "assetDefinitions": [
     {
       "identifier": "customer",
       "composition": {
@@ -79,7 +79,7 @@
       "depth": 3
     }
   ],
-  "assetProperties": [
+  "propertyDefinitions": [
     {
       "identifier": "customerNumber",
       "contexts": ["asset"],

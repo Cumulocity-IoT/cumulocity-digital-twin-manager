@@ -1,7 +1,7 @@
 {
   "name": "Wind Turbine",
   "description": "A wind turbine is a asset that converts the kinetic energy of wind into electrical energy.",
-  "assetModels": [
+  "assetDefinitions": [
     {
       "identifier": "territory",
       "composition": {
@@ -156,7 +156,7 @@
       }
     }
   ],
-  "assetProperties": [
+  "propertyDefinitions": [
     {
       "identifier": "wec_NominalPowerTotal",
       "contexts": ["asset"],
