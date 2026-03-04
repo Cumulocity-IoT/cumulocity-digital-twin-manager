@@ -1,0 +1,93 @@
+{
+  "name": "Vaccum Factory",
+  "description": "Represents the hierarchy of a factory with vaccum chamber",
+  "assetDefinitions": [
+    {
+      "identifier": "customer",
+      "composition": {
+        "allowedProperties": [
+          {
+            "identifier": "customerNumber"
+          }
+        ],
+        "allowedSubAssets": [
+          {
+            "identifier": "factory"
+          }
+        ]
+      },
+      "jsonSchema": {
+        "title": "Customer"
+      },
+      "icon": {
+        "name": "office",
+        "category": "city"
+      },
+      "depth": 0
+    },
+    {
+      "identifier": "factory",
+      "composition": {
+        "allowedSubAssets": [
+          {
+            "identifier": "line"
+          }
+        ],
+        "allowedProperties": []
+      },
+      "jsonSchema": {
+        "title": "Factory"
+      },
+      "icon": {
+        "name": "warehouse",
+        "category": "city"
+      },
+      "depth": 1
+    },
+    {
+      "identifier": "line",
+      "composition": {
+        "allowedSubAssets": [
+          {
+            "identifier": "vacuum_chamber"
+          }
+        ],
+        "allowedProperties": []
+      },
+      "jsonSchema": {
+        "title": "Line"
+      },
+      "icon": {
+        "name": "robot",
+        "category": "devicesAndSensors"
+      },
+      "depth": 2
+    },
+    {
+      "identifier": "vacuum_chamber",
+      "jsonSchema": {
+        "title": "Vaccum chamber"
+      },
+      "icon": {
+        "name": "robot",
+        "category": "devicesAndSensors"
+      },
+      "composition": {
+        "allowedProperties": [],
+        "allowedSubAssets": []
+      },
+      "depth": 3
+    }
+  ],
+  "propertyDefinitions": [
+    {
+      "identifier": "customerNumber",
+      "contexts": ["asset"],
+      "jsonSchema": {
+        "title": "Customer Number",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "number"
+      }
+    }
+  ]
+}
