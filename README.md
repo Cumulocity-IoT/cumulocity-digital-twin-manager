@@ -1,18 +1,4 @@
-# Cumulocity Digital Twin Manager - Asset Definitions Samples
-
-## About This Repository
-
-This is a community-driven repository containing **Asset Definition** samples for the Cumulocity Digital Twin Manager. This public repository is open for community contributions of useful and reusable asset definitions.
-
-### What are Asset Definitions?
-
-An **Asset Definition** is a blueprint or template used to create one or multiple assets in the Digital Twin Manager. It defines the structure and properties of an asset after it is created, allowing for consistent asset creation across your organization.
-
-Each asset definition consists of:
-- **Property Definitions**: Individual properties or attributes that describe characteristics of the asset
-- **Subasset Definitions**: Nested asset structures that allow for hierarchical asset organization
-
-Asset definitions enable standardized, repeatable asset creation and ensure consistency across your digital twin landscape.
+# Cumulocity Digital Twin Manager
 
 ---
 
@@ -25,6 +11,22 @@ Asset definitions enable standardized, repeatable asset creation and ensure cons
 > This repository continues to serve as a community resource for asset definition samples.
 
 ---
+
+# Cumulocity Digital Twin Manager - Asset Definitions Samples
+
+## About This Repository
+
+This repository contains **Asset Definition** samples for the Cumulocity Digital Twin Manager. This public repository is open for community contributions of useful and reusable asset definitions.
+
+### What are Asset Definitions?
+
+An **Asset Definition** is a blueprint or template used to create one or multiple assets in the Digital Twin Manager. It defines the structure and properties of an asset after it is created, allowing for consistent asset creation across your organization.
+
+Each asset definition consists of:
+- **Property Definitions**: Individual properties or attributes that describe characteristics of the asset
+- **Subasset Definitions**: Nested asset structures that allow for hierarchical asset organization
+
+Asset definitions enable standardized, repeatable asset creation and ensure consistency across your digital twin landscape.
 
 ## Repository Structure
 
