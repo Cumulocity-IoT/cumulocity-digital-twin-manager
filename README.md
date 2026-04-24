@@ -1,220 +1,204 @@
-# Cumulocity Digital Twin Manager
-${\color{red}The \ open-source \ release \ of \ DTM \ has \ been \ discontinued \ after \ version \ 1019.1.2.\ This \ decision \ was \ made \ because}$
-${\color{red}our \ customers \ now \ benefit \ from \ continuous \ deployment, \ which \ enables \ them \ to \ access \ changes \ much \ faster.}$
+# Cumulocity Digital Twin Manager - Asset Definitions Samples
 
-## Table of Contents
-- [Overview](#overview)
-- [Installation](#installation)
-	- [Installation of Web application](#for-installation-of-web-application)
-	- [Installation of Microservice](#for-installation-of-microservice)
-	- [Configure a role for Bulk Import](#configure-a-role-to-use-the-bulk-import-feature)
-	- [Subscribing for Feature Branding](#subscribing-for-feature-branding)
-- [Features](#features)
-	- [Overview](#overview-of-features)
-   	- [Assets](#assets)
-   	  	- [Asset hierarchy](#asset-hierarchy)
-   	  	- [Creating assets via UI](#creating-assets-via-ui)
-   	  	- [Creating assets via bulk import](#bulk-import)
-   	  	- [Viewing assets](#view-assets)
-	- [Asset properties](#asset-properties)
-	- [Asset models](#asset-models)
-	- [Localization](#localization)
+## About This Repository
 
-## Overview
+This is a community-driven repository containing **Asset Definition** samples for the Cumulocity Digital Twin Manager. This public repository is open for community contributions of useful and reusable asset definitions.
 
-The `Digital Twin Manager` enables you to create and manage assets around your physical connected devices in Cumulocity IoT. Assets can be used to structure and describe devices in logical hierarchies as encountered in the real world environment. In addition, assets in Cumulocity IoT can be extended and enriched with addtional information using the `Asset properties`.
+### What are Asset Definitions?
 
-The home screen of the DTM application gives an overview of the application. You can see the number of asset models, asset properties and assets available at a glance. You can add asset properties, asset models and assets using the quick links.
+An **Asset Definition** is a blueprint or template used to create one or multiple assets in the Digital Twin Manager. It defines the structure and properties of an asset after it is created, allowing for consistent asset creation across your organization.
 
- **You cannot create asset models, properties and assets if you dont have inventory admin permission.**
+Each asset definition consists of:
+- **Property Definitions**: Individual properties or attributes that describe characteristics of the asset
+- **Subasset Definitions**: Nested asset structures that allow for hierarchical asset organization
 
-`Note: Digital Twin Manager is supported on Cumulocity UI and microservice version of 10.14 and above`
+Asset definitions enable standardized, repeatable asset creation and ensure consistency across your digital twin landscape.
 
-## Installation
+---
 
-The `Digital Twin Manager` is shipped as a standalone application for now. This means it will be installed as a separate application, which provides all the features of the
-`Digital Twin Manager` as described in the [features](#features) section. The standalone application is available in the [release section](https://github.com/SoftwareAG/cumulocity-digital-twin-manager/releases)
-and can be downloaded.
+## Note: Project Status
 
-### For installation of web application:
+> **⚠️ Discontinued Release**
+>
+> The open-source release of Cumulocity Digital Twin Manager has been discontinued after version 1019.1.2. This decision was made because our customers now benefit from continuous deployment, which enables them to access changes much faster.
+>
+> This repository continues to serve as a community resource for asset definition samples.
 
-1. Download dtm-ui.zip from the [release section](https://github.com/SoftwareAG/cumulocity-digital-twin-manager/releases)
-2. Open the `Administration` application in your Cumulocity tenant
-3. Navigate to `Ecosystem` --> `Applications`
-4. Click on `Add application`
-5. Select `Upload web application` in the modal dialog
-6. Select the zip archive, which you downloaded from the release section, to upload it to the tenant
+---
 
-![DTM installation gif](https://github.com/SoftwareAG/cumulocity-digital-twin-manager/assets/107403521/cd1016a3-f52b-407c-b8e0-f5f5deb6a834)
+## Repository Structure
 
-After following these instructions, the application will be deployed on the tenant and is ready for use. In the application switcher on the top right you can now select the `Digital Twin Manager` application.
+This repository is organized into three sample directories, each representing different versions of the asset definition format:
 
-If you want to use `Import assets` functionality, then the microservice needs to be installed.
+### `/samples/` - Original Format
+Contains the earliest version of asset definition samples. Use this for legacy systems or reference purposes.
 
-### For installation of microservice:
+- `sample-asset-model-for-solar-power-plant.json` - Solar power plant asset definition
+- `sample-asset-model-for-wind-turbine.json` - Wind turbine asset definition
+- `sample-asset-models-for-vaccum-factory` - Vacuum factory asset definitions
 
-1. Download dtm-ms.zip from the [release section](https://github.com/SoftwareAG/cumulocity-digital-twin-manager/releases)
-2. Open the `Administration` application in your Cumulocity tenant
-3. Navigate to `Ecosystem` --> `Microservice`
-4. Click on `Add microservice`
-5. Select Upload microservice in the modal dialog
-6. Select the zip archive of microservice, which you downloaded from the release section, to upload it to the tenant
-7. When prompted Subscribe to microservice select Subscribe
+### `/samples-v2/` - Updated Format
+Contains version 2 of the asset definition samples with improvements and refined structure.
 
-After following these instructions, the microservice will be deployed on the tenant. Once the microservice is deployed you can use `Import Assets` feature.
+- `sample-asset-model-for-solar-power-plant.json` - Solar power plant asset definition (v2)
+- `sample-asset-model-for-wind-turbine.json` - Wind turbine asset definition (v2)
+- `sample-asset-models-for-vaccum-factory.json` - Vacuum factory asset definitions (v2)
 
-`Note: If the microservice is deployed but not subscribed, then the Import Assets button will not visible in assets page.`
+### `/samples-v3/` - Latest Format (Recommended)
+Contains the latest version with updated terminology. **This is the recommended version for new projects.**
 
-### Configure a role to use the bulk import feature
+**Terminology Updates in v3:**
+- `assetModels` → `assetDefinitions`
+- `assetProperties` → `propertyDefinitions`
 
-1. Navigate to the `Administration` application via the application switcher in the top right corner.
+- `sample-asset-model-for-solar-power-plant.json` - Solar power plant asset definition (v3)
+- `sample-asset-model-for-wind-turbine.json` - Wind turbine asset definition (v3)
+- `sample-asset-models-for-vaccum-factory.json` - Vacuum factory asset definitions (v3)
 
-2. Under **Quick links** click **Roles**.
+---
 
-3. In the **Global roles** tab, select a role to which the permission has to be provided.
+## Getting Started
 
-4. Set **Admin** permission level for **Digital Twin** type in the "Permissions" section.
+1. **Browse Existing Samples**: Explore the `/samples-v3/` directory for examples of well-structured asset definitions
+2. **Review Documentation**: Each sample directory contains a `README.md` with format-specific details
+3. **Understand the Format**: Study existing JSON structures to understand the asset definition format
+4. **Plan Your Contribution**: Identify an asset type or domain that would be valuable to the community
 
-5. Click **Save**.
+---
 
-Once the permission is assigned, the bulk import feature can be used.
+## Contributing to This Repository
 
-`Note: If the permission is not assigned, then the CSV template will not be downloaded correctly.`
+We welcome contributions from the community! Asset definitions for new asset types, industries, and use cases are especially valuable. Follow these guidelines to ensure a smooth contribution process.
 
-### Subscribing for Feature branding
+### Contribution Guidelines
 
-To use Localization feature, you must have public-options web application installed on the tenant.  One of the ways you can get the public-options web application is by subscribing to **Feature Branding**.  The following are the steps:
+#### 1. **Before You Start**
 
-Log in to the corresponding management tenant as an administrator
-1. Navigate to **Tenants > Subtenants**
-2. Select the subtenant for which you want to add this feature.
-3. Under **Applications** subscribe for **Feature branding**.
+- **Check for Duplicates**: Search the repository to ensure your proposed asset definition doesn't already exist
+- **Create an Issue** (Optional but Recommended): Open a GitHub issue to describe your proposed asset definition. This allows the community to provide feedback before you invest time in development
+- **Review Existing Samples**: Study the samples in `/samples-v3/` to understand the current format and naming conventions
 
-Complete the setup by following the below steps on the tenant where you want to use Localization feature
+#### 2. **Prepare Your Asset Definition**
 
-1. Log in as an administrator of the tenant.
-2. Navigate to **Administration > Ecosystem > Applications**. Under **Features**, make sure **Feature Branding** is subscribed.
-3. Navigate to **Settings > Branding**, and click on Apply. Once done, make sure you can see public-options web application under **Ecosystem > Applications**.
+- **Use Latest Format**: Base your contribution on the v3 format (`/samples-v3/`) with updated terminology (`assetDefinitions`, `propertyDefinitions`)
+- **Follow Naming Conventions**:
+  - Use descriptive, lowercase file names with hyphens: `sample-asset-model-for-[asset-type].json`
+  - Use clear, meaningful property and field names
+  - Include descriptive comments where appropriate
+- **Validate JSON**: Ensure your JSON is valid and properly formatted. Use a JSON validator tool to verify
+- **Document Your Asset**: Include comments or a description explaining:
+  - What the asset represents
+  - What properties and subassets it includes
+  - Any domain-specific information
+  - Use cases or application scenarios
 
-`Note: If you don't have the access for the tenants, please contact your administrator.`
+#### 3. **Testing & Validation**
 
-## Features
+- **Test Your Asset Definition**: Verify that your asset definition can be parsed and used in a Digital Twin Manager environment
+- **Check for Consistency**: Ensure property names, types, and structures are consistent with existing samples
+- **Validate Against Schema**: If applicable, validate your asset definition against the official asset definition schema
 
-### Overview of features
+#### 4. **Creating Your Pull Request**
 
-The `Digital Twin Manager` consists of the following features:
+- **Fork the Repository**: Create a fork of this repository in your GitHub account
+- **Create a Feature Branch**: Use a descriptive branch name:
+  ```
+  git checkout -b add/asset-definition-for-[asset-type]
+  ```
+- **Commit Your Changes**: Write clear, concise commit messages:
+  ```
+  Add asset definition for [asset type]
+  
+  - Includes [main properties]
+  - Supports [key use cases]
+  ```
+- **Add to Appropriate Directory**: Place your file in `/samples-v3/` unless you have a specific reason to use a different version
+- **Update Directory README** (if applicable): If adding to a directory without a README, consider creating one with a brief description
 
-* `Assets` - Lists all the available assets and its hierarchy which are created using asset models and properties.
-* `Asset properties` - Create your own asset properties (simple or complex) to define how data should be stored on an asset
-* `Asset models` - Define asset models to describe the blueprint of your assets
-* `Localization` - Dynamically translate asset model and asset property descriptions to multiple languages.
+#### 5. **Pull Request Submission**
 
-### Assets
+When submitting your pull request:
 
-Assets are the digital representation of physical assets. An asset in DTM application can contain subassets and devices. Initially, no assets are displayed in the `Assets` page by default. If you have already created assets, you find them listed with its hierarchy.
+1. **Write a Clear Title**: Describe what asset definition(s) you're adding
+   ```
+   Add asset definitions for industrial equipment monitoring
+   ```
 
-![image](https://github.com/SoftwareAG/cumulocity-digital-twin-manager/assets/107403521/0a761daf-64c7-4bf7-a4e0-9fef4403e430)
+2. **Provide a Description**:
+   ```
+   ## Description
+   Adds asset definitions for common industrial equipment.
+   
+   ## Included Assets
+   - Heavy machinery with vibration monitoring
+   - Production line conveyor systems
+   - Environmental monitoring sensors
+   
+   ## Validation
+   - JSON validated against standard schema
+   - Tested with Cumulocity Digital Twin Manager v1019.1.2
+   - Follows v3 format and naming conventions
+   ```
 
-<div align="center"><i>Assets screen displaying the list of assets and an option to add asset or import assets.</i></div>
+3. **Reference Any Related Issues**: Use `Closes #[issue-number]` if applicable
 
-### Asset hierarchy
+4. **Ensure Files Are Formatted**: 
+   - JSON is properly formatted and indented
+   - No trailing whitespace
+   - UTF-8 encoding
 
-An asset hierarchy is a structure that organizes multiple assets and devices into a hierarchy, allowing for the visualization and management of complex systems.
+#### 6. **Review Process**
 
-The asset hierarchy is displayed in the Assets page. An asset hierarchy consists of a root asset and all its subsequent subassets. Click Add asset to create the entire hierarchy of an asset in the New asset page. For details, see [To create an asset](#creating-assets-via-ui).
+- **Community Review**: Your pull request will be reviewed by maintainers and community members
+- **Feedback Loop**: Be responsive to feedback and questions
+- **Make Revisions**: Update your pull request based on review comments
+- **Merge**: Once approved, your contribution will be merged into the main branch
 
-![image](https://github.com/SoftwareAG/cumulocity-digital-twin-manager/assets/107403521/b9076853-0d05-41e5-bb1c-71b917241321)
+#### 7. **After Merge**
 
-<div align="center"><i>Asset hierarchy screen displaying the subassets of the root asset.</i></div>
+- **Celebrate**: Your contribution is now part of the public repository!
+- **Share**: Feel free to share your contribution with the community
+- **Maintain**: Help maintain your contribution by responding to issues or questions about it
 
-### Creating assets via UI
+### Best Practices
 
-You have two options for creating assets in the DTM application. The following section describes how to create an asset via the UI. Alternatively, see [Creating assets via bulk import](#bulk-import) on how to import assets in bulk into the DTM application.
+- **Reusability**: Create asset definitions that can be used across different organizations and use cases
+- **Documentation**: Include sufficient documentation so others can understand and use your asset definition
+- **Consistency**: Follow existing naming conventions and structure patterns
+- **Versioning**: If updating an existing asset definition, consider incrementing the version in your contribution description
+- **Examples**: Include example usage scenarios or provide context for where this asset definition might be useful
 
-You can create assets based on the asset models and properties you have defined previously.
+### Code of Conduct
 
-![image](https://github.com/SoftwareAG/cumulocity-digital-twin-manager/assets/107403521/d9ca99a9-62d7-443b-8c54-ed1a56b56f03)
+We expect all contributors to be respectful and professional. Please adhere to the following:
 
-<div align="center"><i>Asset creation screen displaying the asset hierarchy of the selected asset model.</i></div>
+- Be respectful to other community members
+- Provide constructive feedback
+- Focus on the asset definition content, not personal criticism
+- Resolve disagreements professionally and respectfully
 
-### Bulk import
+---
 
-To import all the assets of a particular asset hierarchy at once, use the bulk import feature. Microservice is being used to download the template and import the assets. To use the Bulk import feature, user must be part of a role that has `Admin` permission level for **Digital twin** type.
-[Configure a role for Bulk Import](#configure-a-role-to-use-the-bulk-import-feature)
+## Support & Questions
 
-`Note: Import assets button is disbaled if user doesn't have permission to create a group.`
+- **Issues & Bug Reports**: Use GitHub Issues to report problems with existing asset definitions
+- **Discussions**: Start a GitHub Discussion for questions about contributions or asset definition best practices
+- **Documentation**: Check the `/samples-v3/README.md` for format-specific documentation
 
-![image](https://github.com/SoftwareAG/cumulocity-digital-twin-manager/assets/107403521/94d1b02e-8a25-4906-a707-439ff8d882a9)
+---
 
-<div align="center"><i>Import Assets screen displaying the modal box where you can upload and download the template.</i></div><br>
+## License
 
-You can find more information about how to download the template, import the assets [here](https://github.com/SoftwareAG/cumulocity-digital-twin-manager/blob/main/README.bk.md)
+This repository is provided under the terms outlined in the [LICENSE](LICENSE) file.
 
-### View assets
+---
 
-Select an asset in the Assets page to view the asset details in Subassets tab. It shows all the subassets, child devices and asset properties.
+## Disclaimer
 
-![image](https://github.com/SoftwareAG/cumulocity-digital-twin-manager/assets/107403521/813dd29c-ca61-4542-b912-5d354b60b44b)
+Please refer to the [DISCLAIMER](DISCLAIMER) file for important information regarding the use of these asset definitions.
 
-<div align="center"><i>Sub assets tab displaying the details of the selected asset.</i></div><br>
+---
 
-You can view the hierarchy of the asset in the Asset tree tab. Initially the asset hierarchy is collapsed. Click the expand icon to view the next level of subassets.
+## Community Contributions
 
-Click Add asset to add more subassets or click Import assets to add [child assets in bulk](https://github.com/SoftwareAG/cumulocity-digital-twin-manager/blob/main/README.bk.md).
-
-![image](https://github.com/SoftwareAG/cumulocity-digital-twin-manager/assets/107403521/5bb11509-4681-4d97-a3a5-4426089f6641)
-
-<div align="center"><i>Asset tree tab displaying the child asset hierarchy of the selected asset.</i></div><br>
-
-#### Asset search
-
-You can search for assets through the Search button at the right of the top bar. Enter a search term into the textbox at the top of the Search window to see all assets matching the search criteria in the section Search results.
-
-To see more details click Go to the asset data table at the bottom. This will show the entire search results in a table format.
-
-The Search page only shows a limited number of matches. In case of more matches, switch to the asset data table to see the complete results.
-
-![image](https://github.com/SoftwareAG/cumulocity-digital-twin-manager/assets/107403521/6c05fc0e-b79f-4712-a14c-1c611ef9c653)
-
-<div align="center"><i>Asset search screen displaying the results based on the text entered.</i></div><br>
-
-### Asset properties
-
-The Asset properties can be used to create your own properties to define how data should be stored on an asset. These asset properties can be either complex (nested object) or simple (key-value pair). Furthermore, you can choose a specific data type for each property you define. As of now, the Asset properties supports following data types: Text, Number,File Upload Date Picker, Enumeration, Boolean.
-
-![image](https://github.com/SoftwareAG/cumulocity-digital-twin-manager/assets/107403521/9ccb90fe-4514-4af0-93cb-cf331599c739)
-
-<div align="center"><i>Asset properties screen displaying the list of properties and an option to add or edit the property.</i></div>
-
-### Asset models
-
-Asset models serve as a blueprint for your assets and define how they are structured. An Asset model defines what asset properties an asset should have. Additionally, you can specify relationships between multiple Asset models, which will be respected when you create your actual asset hierarchies. Once the Asset model is created, it can be used to create various assets.
-
-![image](https://github.com/SoftwareAG/cumulocity-digital-twin-manager/assets/107403521/5711f9d5-ce3d-4fa9-acf5-99e0fd38595f)
-
-<div align="center"><i>Edit Asset model screen displaying the details of the selected asset model.</i></div>
-
-### Localization
-
-You can use the Localization component to define translations for your asset models and asset properties. These translations can be provided for all supported languages in Cumulocity IoT. This component requires to have the `feature-branding` feature subscribed for your Cumulocity tenant.
-
-[Subscribing for Feature-branding](#subscribing-for-feature-branding)
-
-![image](https://github.com/SoftwareAG/cumulocity-digital-twin-manager/assets/107403521/a1769673-119b-4fcb-a71f-110cd53de945)
-
-<div align="center"><i>Localization screen displaying the list of translated terms for your asset models and asset properties.</i></div>
-
-## Any comments, suggestions or ideas?
-
-Let us know, if the current way for setting up and maintaining an asset hierarchy meets your needs and expectations. For any suggestions, please navigate to [Issues](https://github.com/SoftwareAG/cumulocity-digital-twin-manager/issues) and open a new issue with all the relevant details. Once you have created your issue, we will make sure to assign the correct label to it, which will help us to categorize your issue:
-
-* 🐞 use "bug" for something that is not working
-* 📖 use "documentation" for any feedback about the documentation
-* 💡 use "idea" for every new idea, feature request or suggestion
-* ❓ use "support" for questions or anything that needs further assistance
-
-**Thanks for your contribution!**
-
-_________________
-
-These tools are provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.
+Thank you to all the community members who have contributed asset definitions! Your contributions help make the Digital Twin ecosystem more robust and useful for everyone.
